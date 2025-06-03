@@ -1,0 +1,25 @@
+APACHE2 INSTALLEREN EN CONFIGUREREN
+
+Installeer Apache2 en zet de service aan.
+zypper refresh
+zypper update
+zypper install apache2
+systemctl start apache2.service
+systemctl enable apache2.service
+
+Gebruik "cd /srv/www/htdocs" en maak de map index.html aan met "echo index.html"
+Bewerk de file (index.html) met "vi index.html"
+In deze file komt alles te staan wat ook op de website komt.
+
+
+(In de home directory)
+Restart de service.
+systemctl reload apache2.service
+systemctl restart apache2.service
+
+controlleer het config bestand:
+apache2ctl configtest
+(SYSTAX OK = goed)
+
+Ga naar de webbrowser, en typ "localhost"
+
